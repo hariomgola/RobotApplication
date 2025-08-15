@@ -1,39 +1,41 @@
-# PC Awake Assistant
+# 🖱️ PC Awake Assistant
 
-A lightweight Python script that gently nudges your mouse to keep your PC awake when you’re away. It oscillates your cursor up and down at configurable intervals, detects manual movement to stop gracefully, and displays a friendly 10-second countdown before closing.
-
----
-
-## Features
-
-- Keeps your system awake by simulating natural mouse movement
-- Configurable delays, movement distance, and iteration limits
-- Detects manual mouse movement to exit early
-- Loads settings from a JSON config or falls back to sensible defaults
-- Colorful, easy-to-read console output
-- Final “thank you” message with a 10-second countdown before the console window closes
+A lightweight Python script that gently nudges your mouse to keep your PC awake when you’re away. It oscillates your cursor up and down at configurable intervals, detects manual movement to stop gracefully, and displays a friendly 10-second countdown before closing. 💤➡️🖱️
 
 ---
 
-## Requirements
+📥 **Download**: [Click here to download ](https://github.com/hariomgola/pc-awaker/releases/download/v1.0.0/pc_awaker_1.0.exe)
 
-- Python 3.6 or higher
-- `pyautogui`
-- `colorama`
+## ✨ Features
+
+- 🕹️ Keeps your system awake by simulating natural mouse movement
+- ⏱️ Configurable delays, movement distance, and iteration limits
+- 👀 Detects manual mouse movement to exit early
+- 📄 Loads settings from a JSON config or falls back to sensible defaults
+- 🎨 Colorful, easy-to-read console output
+- 🙏 Final “thank you” message with a 10-second countdown before the console window closes
 
 ---
 
-## Installation
+## 📦 Requirements
 
-1. Clone the repository to your local machine
-2. Navigate into the project folder
-3. Install dependencies with pip
+- 🐍 Python 3.6 or higher
+- 📦 `pyautogui`
+- 📦 `colorama`
 
-   ```bash
+---
+
+## ⚙️ Installation
+
+1. 📥 Clone the repository to your local machine
+2. 📂 Navigate into the project folder
+3. 📌 Install dependencies with pip
+
+```bash
    git clone https://github.com/hariomgola/pc-awaker.git
    cd pc-awaker
    pip install pyautogui colorama
-   ```
+```
 
 ---
 
@@ -43,12 +45,16 @@ python awaken.py <timedelay_in_ms> <iteration_count>
 python awaken.py 200 1000000
 ```
 
-## Project Status
+## 🚧 Project Status
 
-    - Completed
+✅ **Completed & Ready to Roll!**
 
-## Made with :heart:
+---
 
-Portfolio :computer: https://hariomgola.github.io/
+## ❤️ Made with Passion
 
-### :point_right: `I see it I love it I code it`
+🔗 **Portfolio**: [💻 hariomgola.github.io](https://hariomgola.github.io/)
+
+---
+
+### 💡 `I see it 👀 I love it ❤️ I code it 💻`
