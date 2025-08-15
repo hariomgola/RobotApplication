@@ -30,8 +30,8 @@ A lightweight Python script that gently nudges your mouse to keep your PC awake 
 3. Install dependencies with pip
 
    ```bash
-   git clone https://github.com/yourusername/pc-awake-assistant.git
-   cd pc-awake-assistant
+   git clone https://github.com/hariomgola/pc-awaker.git
+   cd pc-awaker
    pip install pyautogui colorama
    ```
 
