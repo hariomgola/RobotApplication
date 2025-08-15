@@ -1,8 +1,9 @@
 {
-    "MouseMove":100,
-    "timedelay":100,
-    "TimeinMS":5000000,
-    "MultipleCheck":2,
-    "copyright":"Copyright @ 2021 Hariom Gola. All Right Reserved Not to be Used for Making profit",
-    "follow":"github.com/hariomgola"
+  "MouseMove": 2,
+  "backup_MouseMove": 100,
+  "timedelay": 100,
+  "TimeinMS": 5000000,
+  "MultipleCheck": 2,
+  "copyright": "Copyright @ 2025 Hariom Gola. All Right Reserved Not to be Used for Making profit",
+  "follow": "github.com/hariomgola"
 }
