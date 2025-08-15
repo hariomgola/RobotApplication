@@ -2,6 +2,7 @@ import pyautogui
 import time
 import os
 import sys
+import json
 from colorama import init, Fore, Style
 
 init(autoreset=True)
@@ -46,18 +47,24 @@ def kill_terminal_mouse_move():
 
 
 def copy_right():
-    """Final message after the loop finishes or is interrupted."""
+    """Final message after the loop finishes or is interrupted, with countdown."""
     os.system('cls' if os.name == 'nt' else 'clear')
     print(Fore.GREEN + "* -Thanks for coming online — it's been very hard to keep your PC awake- *")
     print(Fore.CYAN + Style.BRIGHT + data['copyright'])
     print(Fore.GREEN + Style.BRIGHT + f"love this project <3 follow -{data['follow']}")
+    print(Fore.RED + "\nThis window will close in 10 seconds...")
+
+    for i in range(10, 0, -1):
+        print(Fore.YELLOW + f"Closing in {i} seconds...", end='\r')
+        time.sleep(1)
+
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 def change_mouse(timedelay=None, timeinms=None):
     """Oscillate the mouse up/down until manual movement or iteration limit."""
     global mouse, mouse_change_flag
 
-    # Use provided or default values
     timedelay = timedelay or data['timedelay']
     timeinms = timeinms or data['TimeinMS']
     multiple_check = data['MultipleCheck']
