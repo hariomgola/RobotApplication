@@ -13,18 +13,8 @@
     - Simply install python on your system.
     - then Run 'npm i robotjs'
 
+ */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/**
+  -> Using Python 
  */
