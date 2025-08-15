@@ -6,6 +6,8 @@ A lightweight Python script that gently nudges your mouse to keep your PC awake 
 
 📥 **Download**: [Click here to download ](https://github.com/hariomgola/pc-awaker/releases/download/v1.0.0/pc_awaker_1.0.exe)
 
+---
+
 ## ✨ Features
 
 - 🕹️ Keeps your system awake by simulating natural mouse movement
