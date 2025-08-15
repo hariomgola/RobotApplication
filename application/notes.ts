@@ -19,4 +19,5 @@
   -> Using Python 
    - pip install pyinstaller
    - pyinstaller --onefile main.py
+   - pyinstaller --icon=pc_awaker_logo.ico  --onefile main.py
  */
