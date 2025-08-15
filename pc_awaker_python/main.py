@@ -3,6 +3,7 @@ import time
 import os
 import sys
 import json
+import shutil
 from colorama import init, Fore, Style
 
 init(autoreset=True)
@@ -45,6 +46,20 @@ def kill_terminal_mouse_move():
     if pyautogui.position().x != initial_mouse_x:
         mouse_change_flag = True
 
+def print_progress(pos, length=30, color=Fore.GREEN):
+    """
+    Draw a bouncing progress bar of given length.
+    pos: iteration counter used to compute bounce position.
+    """
+    cycle = (length - 1) * 2
+    idx = pos % cycle
+    if idx >= length:
+        idx = cycle - idx
+
+    bar = '#' * idx + '-' * (length - idx)
+    sys.stdout.write(color + '\r[' + bar + ']')
+    sys.stdout.flush()
+
 
 def copy_right():
     """Final message after the loop finishes or is interrupted, with countdown."""
@@ -72,25 +87,28 @@ def change_mouse(timedelay=None, timeinms=None):
 
     print(Fore.MAGENTA + f" -  Current mouse position {{'x': {mouse.x}, 'y': {mouse.y}}} -")
 
+    pos = 0
     for i in range(timeinms):
         os.system('cls' if os.name == 'nt' else 'clear')
-        print(Fore.CYAN + '-' * 53)
+        print_progress(pos)
+        pos += 1
 
         if mouse_change_flag:
             break
 
         if i % multiple_check == 0:
             new_y = mouse.y + mouse_move
-            print(Fore.YELLOW + f"      - moving to x:{mouse.x}, y:{new_y} -")
         else:
             new_y = mouse.y - mouse_move
-            print(Fore.YELLOW + f"      - moving to x:{mouse.x}, y:{new_y} -")
 
+        print()
+        print(Fore.YELLOW + f"   - moving to x:{mouse.x}, y:{new_y} -")
         pyautogui.moveTo(mouse.x, new_y, duration=timedelay / 1000)
         mouse = pyautogui.position()
 
         kill_terminal_mouse_move()
-        print(Fore.CYAN + '-' * 53)
+        print_progress(pos-1)
+        time.sleep(timedelay / 1000)
 
     copy_right()
 
@@ -99,4 +117,4 @@ if __name__ == '__main__':
     try:
         change_mouse(data['timedelay'], data['TimeinMS'])
     except KeyboardInterrupt:
-        print("Script interrupted manually.")
+        print("\nScript interrupted manually.")
